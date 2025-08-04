@@ -11,7 +11,7 @@ class Course(models.Model):
     title = models.CharField(max_length=300, unique=True)
     slug = models.SlugField(max_length=320, unique=True, blank=True)
     description = models.TextField(verbose_name='Course Description')
-    duration_course = models.PositiveSmallIntegerField(help_text='Duration in weeks')
+    duration_course = models.PositiveSmallIntegerField(help_text='Kurs davomiyligi')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     discount_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     level = models.CharField(max_length=20, choices=LevelChoices.choices, default=LevelChoices.BEGINNER)
